@@ -8,7 +8,7 @@ we need to know the current position `i`, and the value in the array at index `i
 
 for `i = 0`, if `x[0]` = 0, then `dp[0][k] = 1` for all k, otherwise `dp[0][x[0]]` is 1, and the rest are 0
 
-**transition**: for every i from 1 to n-1, if `x[i]` = 0, then for all k, `dp[i][k]` is the sum of `dp[i][k-1]`, `dp[i][k]`, `dp[i][k+1]`.
+**transition**: for every other i from 1 to n-1, if `x[i]` = 0, then for all k, `dp[i][k]` is the sum of `dp[i][k-1]`, `dp[i][k]`, `dp[i][k+1]`.
 otherwise, `dp[i][x[i]]` is the sum of `dp[i][x[i]-1]`, `dp[i][x[i]]`, `dp[i][x[i]+1]`.
 
 ```cpp
